@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    body {
+        @apply bg-body-bg text-white font-sans;
+    }
+}
+
+@layer components {
+    .btn-primary {
+        @apply bg-primary-green hover:bg-secondary-green text-black font-bold py-2 px-6 rounded-md transition duration-300;
+    }
+
+    .btn-outline {
+        @apply border border-gray-600 hover:border-primary-green text-white py-2 px-6 rounded-md transition;
+    }
+
+    .btn-ghost {
+        @apply bg-white/5 hover:bg-white/10 backdrop-blur-md border border-white/10 text-white py-2 px-6 rounded-md transition duration-300 flex items-center justify-center gap-2 active:scale-95;
+    }
+}
