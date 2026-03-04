@@ -1,8 +1,42 @@
 import React from "react";
 import { Link } from "@inertiajs/react";
 import { socialLogos } from "@/utils/socialLogos";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import DashboardCard from "./DashboardCard";
+import { homeCards } from "@/utils/homeCards";
 
 const Hero = () => {
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 700,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        arrows: false,
+        centerMode: false,
+        variableWidth: false,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
+            {
+                breakpoint: 640,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
+        ],
+    };
+
     return (
         <section className="relative min-h-[600px] flex items-center overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-primary-green/20">
             <div className="absolute inset-0 opacity-10">
@@ -158,73 +192,17 @@ const Hero = () => {
                             </Link>
                         </div>
                     </div>
-
                     <div className="relative hidden lg:block">
-                        <div className="relative">
-                            {/* Main card */}
-                            <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-lg p-4">
-                                <div className="flex items-center gap-2 mb-4">
-                                    <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                                    <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                                    <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                                    <span className="text-xs text-gray-400 ml-2">
-                                        Dashboard Preview
-                                    </span>
-                                </div>
-
-                                {/* Stats grid */}
-                                <div className="grid grid-cols-2 gap-3 mb-3">
-                                    <div className="bg-gray-900/50 p-3 rounded border border-gray-700">
-                                        <div className="text-primary-green text-sm font-bold">
-                                            +2.5k
-                                        </div>
-                                        <div className="text-xs text-gray-500">
-                                            Instagram
-                                        </div>
-                                    </div>
-                                    <div className="bg-gray-900/50 p-3 rounded border border-gray-700">
-                                        <div className="text-primary-green text-sm font-bold">
-                                            +1.8k
-                                        </div>
-                                        <div className="text-xs text-gray-500">
-                                            TikTok
-                                        </div>
-                                    </div>
-                                </div>
-
-                                {/* Progress bar */}
-                                <div className="bg-gray-900/50 p-3 rounded border border-gray-700">
-                                    <div className="flex justify-between text-xs mb-1">
-                                        <span className="text-gray-400">
-                                            Daily Orders
-                                        </span>
-                                        <span className="text-primary-green">
-                                            78%
-                                        </span>
-                                    </div>
-                                    <div className="h-1.5 bg-gray-700 rounded-full overflow-hidden">
-                                        <div className="h-full w-3/4 bg-primary-green rounded-full"></div>
-                                    </div>
-                                </div>
-
-                                {/* Activity list */}
-                                <div className="mt-3 space-y-2">
-                                    {[1, 2, 3].map((i) => (
-                                        <div
-                                            key={i}
-                                            className="flex items-center gap-2 text-xs"
-                                        >
-                                            <div className="w-1.5 h-1.5 rounded-full bg-primary-green"></div>
-                                            <span className="text-gray-400">
-                                                Order #{i}234 - Completed
-                                            </span>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-
-                            {/* Floating badge */}
-                        </div>
+                        <Slider {...settings}>
+                            {homeCards.map((card, idx) => (
+                                <DashboardCard
+                                    key={idx}
+                                    stats={card.stats}
+                                    progress={card.progress}
+                                    activity={card.activity}
+                                />
+                            ))}
+                        </Slider>
                     </div>
                 </div>
             </div>
