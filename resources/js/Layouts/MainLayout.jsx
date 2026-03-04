@@ -6,7 +6,7 @@ export default function MainLayout({ children }) {
         <div className="min-h-screen flex flex-col">
             <Navbar />
 
-            <main className="flex-grow container mx-auto py-6">{children}</main>
+            <main>{children}</main>
 
             <Footer />
         </div>

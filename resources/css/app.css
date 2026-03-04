@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --color-primary: #22c55e;
+    --color-secondary: #16a34a;
+    --color-success: #10b981;
+    --color-info: #38bdf8;
+    --color-warning: #f59e0b;
+    --color-danger: #ef4444;
+    --color-body-bg: #0f172a;
+}
+
 @layer base {
     body {
         @apply bg-body-bg text-white font-sans;
@@ -10,7 +20,7 @@
 
 @layer components {
     .btn-primary {
-        @apply bg-primary-green hover:bg-secondary-green text-black font-bold py-2 px-6 rounded-md transition duration-300;
+        @apply bg-gradient-to-r from-primary-green via-emerald-400 to-sky-400 hover:from-secondary-green hover:via-emerald-500 hover:to-sky-500 text-black font-semibold py-2.5 px-7 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl;
     }
 
     .btn-outline {

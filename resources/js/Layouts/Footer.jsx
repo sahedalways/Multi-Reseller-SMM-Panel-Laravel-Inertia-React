@@ -24,7 +24,7 @@ const Footer = () => {
                             </svg>
                         </div>
                         <span className="text-xl font-bold text-white">
-                            Crescitaly
+                            yesMMwave
                         </span>
                     </div>
                     <p className="text-gray-400 text-sm leading-relaxed">
@@ -119,7 +119,7 @@ const Footer = () => {
             {/* Bottom Bar */}
             <div className="max-w-7xl mx-auto border-t border-white/5 pt-8 flex flex-col md:row justify-between items-center gap-4">
                 <p className="text-gray-500 text-xs">
-                    © 2024 Crescitaly. All rights reserved.
+                    © 2024 yesMMwave. All rights reserved.
                 </p>
                 <div className="flex gap-6">
                     {/* Social Icons Placeholder */}
