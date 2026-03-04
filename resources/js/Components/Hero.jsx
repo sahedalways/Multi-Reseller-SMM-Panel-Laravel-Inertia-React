@@ -129,13 +129,13 @@ const Hero = () => {
                             </span>
                         </div>
 
-                        <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-3 sm:mb-4">
+                        <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-3 sm:mb-4">
                             <span className="text-white">Grow Your Social</span>
                             <br />
                             <span className="text-primary-green">
                                 Media Presence
                             </span>
-                        </h1>
+                        </h2>
 
                         <p className="text-sm sm:text-base text-gray-400 mb-6 sm:mb-8 max-w-lg mx-auto lg:mx-0">
                             The most reliable SMM panel for likes, followers,
@@ -156,34 +156,6 @@ const Hero = () => {
                             >
                                 Sign In
                             </Link>
-                        </div>
-
-                        {/* Stats */}
-                        <div className="mt-8 flex justify-center lg:justify-start gap-6 sm:gap-8">
-                            <div>
-                                <div className="text-xl sm:text-2xl font-bold text-white">
-                                    10k+
-                                </div>
-                                <div className="text-xs sm:text-sm text-gray-500">
-                                    Clients
-                                </div>
-                            </div>
-                            <div>
-                                <div className="text-xl sm:text-2xl font-bold text-white">
-                                    500+
-                                </div>
-                                <div className="text-xs sm:text-sm text-gray-500">
-                                    Services
-                                </div>
-                            </div>
-                            <div>
-                                <div className="text-xl sm:text-2xl font-bold text-white">
-                                    24/7
-                                </div>
-                                <div className="text-xs sm:text-sm text-gray-500">
-                                    Support
-                                </div>
-                            </div>
                         </div>
                     </div>
 
@@ -252,33 +224,6 @@ const Hero = () => {
                             </div>
 
                             {/* Floating badge */}
-                            <div className="absolute -bottom-2 -right-2 bg-gray-900 border border-gray-700 rounded-md p-2">
-                                <div className="flex items-center gap-2">
-                                    <div className="w-6 h-6 bg-primary-green/20 rounded flex items-center justify-center">
-                                        <svg
-                                            className="w-3 h-3 text-primary-green"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            viewBox="0 0 24 24"
-                                        >
-                                            <path
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                                strokeWidth={2}
-                                                d="M5 13l4 4L19 7"
-                                            />
-                                        </svg>
-                                    </div>
-                                    <div>
-                                        <div className="text-xs font-bold text-white">
-                                            Instant
-                                        </div>
-                                        <div className="text-[10px] text-gray-500">
-                                            Delivery
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
