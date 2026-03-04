@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "@inertiajs/react";
+import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
     return (
@@ -122,24 +123,23 @@ const Footer = () => {
                     © 2024 yesMMwave. All rights reserved.
                 </p>
                 <div className="flex gap-6">
-                    {/* Social Icons Placeholder */}
                     <a
                         href="#"
                         className="text-gray-500 hover:text-white transition"
                     >
-                        <i className="fab fa-facebook"></i>
+                        <FaFacebookF size={20} />
                     </a>
                     <a
                         href="#"
                         className="text-gray-500 hover:text-white transition"
                     >
-                        <i className="fab fa-twitter"></i>
+                        <FaTwitter size={20} />
                     </a>
                     <a
                         href="#"
                         className="text-gray-500 hover:text-white transition"
                     >
-                        <i className="fab fa-instagram"></i>
+                        <FaInstagram size={20} />
                     </a>
                 </div>
             </div>

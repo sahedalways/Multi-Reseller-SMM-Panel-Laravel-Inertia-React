@@ -68,9 +68,9 @@ const Hero = () => {
                 {[...Array(20)].map((_, i) => {
                     const top = Math.random() * 100;
                     const left = Math.random() * 100;
-                    const size = Math.random() * 2 + 1; // 1px – 3px
-                    const duration = 5 + Math.random() * 5; // 5s – 10s
-                    const delay = Math.random() * 5; // 0s – 5s
+                    const size = Math.random() * 2 + 1;
+                    const duration = 5 + Math.random() * 5;
+                    const delay = Math.random() * 5;
 
                     return (
                         <div
@@ -83,7 +83,7 @@ const Hero = () => {
                                 height: `${size}px`,
                                 animationDelay: `${delay}s`,
                                 animationDuration: `${duration}s`,
-                                opacity: 0.6 + Math.random() * 0.4, // vary opacity
+                                opacity: 0.6 + Math.random() * 0.4,
                             }}
                         />
                     );
@@ -93,8 +93,8 @@ const Hero = () => {
                 {[...Array(10)].map((_, i) => {
                     const top = Math.random() * 100;
                     const left = Math.random() * 100;
-                    const size = Math.random() * 4 + 2; // 2px – 6px
-                    const duration = 6 + Math.random() * 6; // 6s – 12s
+                    const size = Math.random() * 4 + 2;
+                    const duration = 6 + Math.random() * 6;
                     const delay = Math.random() * 4;
 
                     return (
